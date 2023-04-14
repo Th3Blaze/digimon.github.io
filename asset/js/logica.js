@@ -15,11 +15,24 @@ function crearTabla(resp) {
                 <td><img src="${datoTemporal.img}" alt=""></td>
                 <td>${datoTemporal.level}</td>
             `
+
     }
 
 }
-// mostrar ocultar
+// mostrar ocultar bannerCentral
 function dgmListado() {
     document.getElementById('listar').style.display = "block";
+    document.getElementById('buscar').style.display = "none";
+    document.getElementById('bannerCentral').style.display = "none";
 }
-
+function dgmBuscar() {
+    document.getElementById('buscar').style.display = "block";
+    document.getElementById('listar').style.display = "none";
+    document.getElementById('bannerCentral').style.display = "none";
+}
+limpiar
+function limpiar() {
+    document.getElementById('buscar').style.display = "none";
+    document.getElementById('listar').style.display = "none";
+    document.getElementById('bannerCentral').style.display = "block";
+}

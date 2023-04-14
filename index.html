@@ -20,10 +20,13 @@
     <nav class="navbar bg-dark bg-body-tertiary">
         <form class="container-fluid justify-content-start">
             <button class="btn btn-outline-success me-2" type="button" onclick="dgmListado()">Listado Digimon</button>
-
+            <button class="btn btn-sm btn-outline-secondary me-2" type="button" onclick="dgmBuscar()">Buscar
+                Digimon</button>
+            <button class="btn btn-sm btn-outline-secondary" type="button" onclick="limpiar()">Inicio</button>
         </form>
     </nav>
-
+    <!--baner central-->
+            <div class="col-mb-6 fondo2" id="bannerCentral"></div>
     <!--tabla listado-->
     <div class="container ocultar-div" id="listar">
         <div class="row">
@@ -42,7 +45,19 @@
             </div>
         </div>
     </div>
-    
+    <!--form buscar-->
+    <section>
+        <!-- Comuniquemonos-->
+        <div class="contenedor col-md-6 ocultar-div text-center" display="" id="buscar">
+            <form id="form">
+                <div class="form-group col-12">
+                    <label for="nombre">Ingrese nombre de un Digimon</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+                </div>
+                <button type="submit" class="btn btn-primary" id="boton" onclick="getFormData();">Enviar</button>
+            </form>
+        </div>
+    </section>
 
 
     <script src="asset/js/logica.js"></script>
