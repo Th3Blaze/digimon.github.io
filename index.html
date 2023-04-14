@@ -20,7 +20,7 @@
     <nav class="navbar bg-dark bg-body-tertiary">
         <form class="container-fluid justify-content-start">
             <button class="btn btn-outline-success me-2" type="button" onclick="dgmListado()">Listado Digimon</button>
-            <button class="btn btn-sm btn-outline-secondary" type="button" onclick="dgmBuscar()">Buscar Digimon</button>
+
         </form>
     </nav>
 
@@ -42,30 +42,7 @@
             </div>
         </div>
     </div>
-    <!--form buscar-->
-    <section>
-        <div class="contenedor col-md-6 ocultar-div" display="" id="buscar">
-            <div class="row">
-                <!--reservas-->
-                <div class="" id="alinea">
-                    <form id="form">
-                        <div class="form-group col-mb-6">
-                            <label for="motivo">Elija un Digimon</label>
-                            <select id="inputState" class="form-control" >
-                                <option selected value="Elija">Elija un digimon</option>
-                                <option value="" id="listado"></option>
-                            </select>
-                        </div>
-                        <div class="form-group col-mb-6">
-                            <label for="exampleFormControlTextarea1">Comentarios</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" id="boton" onclick="getFormData();">Enviar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
 
     <script src="asset/js/logica.js"></script>
