@@ -1,0 +1,23 @@
+body {
+    background-image: url("../img/background.jpg");
+    background-size: 300px 100px;
+}
+
+
+
+@media screen and (min-width:10px) {
+    .ocultar-div {
+        display: none;
+    }
+}
+
+.contenedor {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.7;
+    padding: 4%;
+    border-radius: 2%;
+    color: white;
+}
