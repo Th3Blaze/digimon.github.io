@@ -5,38 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="asset/img/digimn.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Jquerry-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--css-->
     <link rel="stylesheet" href="asset/css/style.css">
     <title>Digimon</title>
+    
 </head>
 
 <body>
-    <!--Navbar-->
-    <nav class="navbar bg-dark bg-body-tertiary">
-        <form class="container-fluid justify-content-start">
-            <button class="btn btn-outline-success me-2" type="button" onclick="dgmListado()">Listado Digimon</button>
-            <button class="btn btn-sm btn-outline-secondary me-2" type="button" onclick="dgmBuscar()">Buscar
-                Digimon</button>
-            <button class="btn btn-sm btn-outline-secondary" type="button" onclick="limpiar()">Inicio</button>
-        </form>
+    <!--navbar-->
+    <nav class="navbar navbar-dark navbar-expand-md fixed-top bd">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand"><img src="asset/img/digimn.png" alt="">
+            </a>
+            <form class="d-flex" role="search">
+                <input type="text" id="digimon" class="form-control me-2" placeholder="Introduce un Digimon">
+                <button type="button" onclick="mostrarFoto()" class="btn btn-primary" data-toggle="modal"
+                    data-target="#exampleModalCenter">Buscar</button>
+                <button class="btn  btn-primary" type="submit" onclick="limpiar()">Inicio</button>
+            </form>
+        </div>
     </nav>
-    <!--baner central-->
-            <div class="col-mb-6 fondo2" id="bannerCentral"></div>
     <!--tabla listado-->
-    <div class="container ocultar-div" id="listar">
+    <div class="container  pt-5 col-md-6 " id="listar">
         <div class="row">
-            <div class="col-mb-6">
-                <table class="table table-dark container" display="">
+            <div>
+                <table class="table table-dark container text-center" display="">
                     <thead>
                         <tr>
-                            <th>Nombre</th>
-                            <th class="col-mb-6">imagen</th>
-                            <th>Nivel</th>
+                            <th>
+                                <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Imagen </p>
+                            </th>
+                            <th>
+                                <p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Nombre &nbsp;
+                                    &nbsp; &nbsp; &nbsp; &nbsp;</p>
+                            </th>
+                            <th>
+                                <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Nivel </p>
+                            </th>
                         </tr>
                     </thead>
                     <tbody id="contenido">
@@ -45,21 +56,20 @@
             </div>
         </div>
     </div>
-    <!--form buscar-->
-    <section>
-        <!-- Comuniquemonos-->
-        <div class="contenedor col-md-6 ocultar-div text-center" display="" id="buscar">
-            <form id="form">
-                <div class="form-group col-12">
-                    <label for="nombre">Ingrese nombre de un Digimon</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
-                </div>
-                <button type="submit" class="btn btn-primary" id="boton" onclick="getFormData();">Enviar</button>
-            </form>
+    <!-- buscar -->
+    <div class="container  pt-5 col-md-6 " id="buscar">
+        <div class="row">
+            <div class="card text-center" style="width: 18rem;" id="contenido2">
         </div>
-    </section>
-
-
+    </div>
+    </div>
+    <!--footer-->
+    <div class="col-md-6">
+        <footer>
+            <p>Digimon Creado por : Akiyoshi Hongo</p>
+        </footer>
+    </div>
+    <!--script-->
     <script src="asset/js/logica.js"></script>
     <script src="asset/js/form.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
