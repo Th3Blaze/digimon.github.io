@@ -1,0 +1,8 @@
+#Digimon #
+Esta pagin a esta creada para explotar el api https://digimon-api.vercel.app/
+en la cual se pueden realizar busquedas y listar todos los digimones posibles
+
+
+la carga del listado es automatica
+la busqueda se realizaatravez delminput y el boton buscar 
+el boton inicio recarga la pagina 
